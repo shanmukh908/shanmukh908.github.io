@@ -9,6 +9,10 @@
 <meta property="og:description" content="Spring Boot, Spring Security, JPA and MySQL. Live demo and source code.">
 <meta property="og:type" content="website">
 <meta name="theme-color" content="#3451e6">
+<meta property="og:url" content="https://shanmukh908.github.io">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Shanmukha Vardhan Valaboju","jobTitle":"Java Backend Developer","url":"https://shanmukh908.github.io","email":"mailto:shanmukhavardhan1122@gmail.com","sameAs":["https://github.com/shanmukh908","https://www.linkedin.com/in/shanmukha-vardhan-valaboju-82786b269"],"alumniOf":"Kakatiya Institute of Technology and Science"}</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233451e6'/%3E%3Ctext x='32' y='42' font-size='28' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3ESV%3C/text%3E%3C/svg%3E">
 <style>
 :root{--bg:#f7f8fb;--surface:#fff;--ink:#0f172a;--muted:#5b6678;--line:#e2e6ee;--brand:#3451e6;--brand-ink:#fff;--soft:#eaeefe;--ok:#12a150;color-scheme:light}
@@ -95,14 +99,27 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:.86rem;text-align:center
  .card{padding:22px}
 }
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero>*{animation:none}.btn{transition:none}}
+h1,h2,.logo,.big{font-family:Manrope,Inter,system-ui,sans-serif}
+#prog{position:fixed;top:0;left:0;height:3px;width:0;background:var(--brand);z-index:30}
+.about p{max-width:42em;margin:0 0 14px;font-size:1.05rem}
+.shots{margin:22px 0}
+.stabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.stabs button{border:1px solid var(--line);background:var(--bg);color:var(--muted);border-radius:999px;padding:6px 16px;font:inherit;font-size:.88rem;cursor:pointer}
+.stabs button[aria-selected="true"]{background:var(--brand);color:var(--brand-ink);border-color:var(--brand)}
+.sview img{display:block;width:100%;border-radius:12px;border:1px solid var(--line)}
+.flow{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:6px 0 4px}
+.flow span{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:.85rem;font-weight:600}
+.flow i{color:var(--muted);font-style:normal}
+.flowcap{font-size:.85rem;color:var(--muted);margin:0 0 22px}
 </style>
 </head>
 <body>
+<div id="prog"></div>
 <header>
  <div class="c bar">
   <a class="logo" href="#top">Shanmukha V.</a>
   <nav class="links" id="links" aria-label="Main">
-   <a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#practice">Problem solving</a><a href="#contact">Contact</a>
+   <a href="#about">About</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#practice">Problem solving</a><a href="#contact">Contact</a>
   </nav>
   <button class="ib" id="theme" type="button" aria-label="Switch between light and dark theme">Theme</button>
   <a class="btn sm" href="Shanmukha_Resume.pdf" download>Resume</a>
@@ -148,24 +165,33 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:.86rem;text-align:center
 </div>
 
 <div class="c">
+<section id="about" class="about">
+ <h2>About me</h2>
+ <p>I am a Programmer Analyst at Cognizant, where I monitor and support a production application for a UK health-insurance client. The part of the job I enjoy most is tracing an incident back to its cause, and I want to be on the side that designs and builds the system.</p>
+ <p>So I learned Spring Boot properly and built, secured and deployed a full application on my own. I am looking for a Java backend role at a product company where I can keep building and learning.</p>
+</section>
+
 <section id="projects">
  <h2>Featured project</h2>
  <p class="sub">A complete application I designed, built, secured and deployed. The code is public and the app is live.</p>
  <article class="card">
   <h3 style="font-size:1.4rem">Shanmukh’s Gym: Membership Management System</h3>
   <p>A web app that a gym front desk can run: add members, sell membership plans, track renewals and see revenue on a dashboard.</p>
+  <div class="shots" id="shots" hidden><div class="stabs" role="tablist" aria-label="Screenshots"></div><div class="sview"><img alt=""></div></div>
   <div class="g2">
    <div><h3>Role-based security</h3><p>Admin has full access. Staff cannot change plans or delete members. Rules are enforced on the server, not just hidden in the menu.</p></div>
    <div><h3>Safe logins</h3><p>BCrypt-hashed passwords, CSRF protection on every form, and secrets kept out of the repository.</p></div>
    <div><h3>Real business rules</h3><p>No overlapping memberships, the price is saved at purchase time, and status is calculated from dates. All run in transactional service methods.</p></div>
    <div><h3>Efficient queries</h3><p>JPQL aggregates for the dashboard, a NOT EXISTS subquery for members who have not renewed, and fetch joins to avoid N+1 queries.</p></div>
   </div>
+  <div class="flow" aria-label="How a request travels through the app"><span>Browser</span><i>&rsaquo;</i><span>Spring Security</span><i>&rsaquo;</i><span>Controller</span><i>&rsaquo;</i><span>Service</span><i>&rsaquo;</i><span>Repository</span><i>&rsaquo;</i><span>MySQL</span></div>
+  <p class="flowcap">How a request travels through the app</p>
   <div class="tags"><span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>Spring Data JPA</span><span>Hibernate</span><span>Thymeleaf</span><span>MySQL</span><span>Docker</span></div>
   <div class="row">
    <a class="btn" href="https://shanmukhs-gym.onrender.com">Open live demo</a>
    <a class="btn ghost" href="https://github.com/shanmukh908/shanmukhs-gym-management">View source code</a>
   </div>
-  <p class="note">Deployed with Docker on Render with a managed MySQL database. It runs on free hosting and sleeps when idle, so the first load can take 1 to 2 minutes. It contains sample data only.</p>
+  <p class="note">Deployed with Docker on Render with a managed MySQL database. It runs on free hosting and sleeps when idle, so the first load can take 1 to 2 minutes. It contains sample data only. Planned next: automated tests, a REST API with JWT, and payments in test mode.</p>
  </article>
  <!--
  MORE PROJECTS: copy the <article class="card"> block above, change the text and links.
@@ -231,6 +257,7 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:.86rem;text-align:center
   <p>I am looking for a backend developer role where I can keep building and learning. Email is the quickest way to reach me.</p>
   <div class="row" style="justify-content:center">
    <a class="btn" href="mailto:shanmukhavardhan1122@gmail.com">Email me</a>
+   <button class="btn ghost" id="copy" type="button">Copy email</button>
    <a class="btn ghost" href="https://www.linkedin.com/in/shanmukha-vardhan-valaboju-82786b269">LinkedIn</a>
    <a class="btn ghost" href="Shanmukha_Resume.pdf" download>Download resume</a>
   </div>
@@ -251,6 +278,23 @@ footer{padding:28px 0 40px;color:var(--muted);font-size:.86rem;text-align:center
  });
  m.addEventListener("click",function(){var o=l.classList.toggle("open");m.setAttribute("aria-expanded",o)});
  l.addEventListener("click",function(){l.classList.remove("open");m.setAttribute("aria-expanded","false")});
+ var pr=document.getElementById("prog");
+ addEventListener("scroll",function(){var h=r.scrollHeight-innerHeight;pr.style.width=(h>0?scrollY/h*100:0)+"%"},{passive:true});
+ var cp=document.getElementById("copy");
+ cp.addEventListener("click",function(){
+  var e="shanmukhavardhan1122@gmail.com";
+  function ok(){cp.textContent="Copied";setTimeout(function(){cp.textContent="Copy email"},2000)}
+  if(navigator.clipboard){navigator.clipboard.writeText(e).then(ok,function(){})}
+ });
+ var box=document.getElementById("shots"),tabs=box.querySelector(".stabs"),im=box.querySelector("img");
+ [["Dashboard","assets/dashboard.png"],["Members","assets/members.png"],["Plans","assets/plans.png"],["Enrollments","assets/enrollments.png"]].forEach(function(x){
+  var t=new Image();t.onload=function(){
+   var b=document.createElement("button");b.type="button";b.textContent=x[0];b.setAttribute("role","tab");
+   b.onclick=function(){show(b,x)};tabs.appendChild(b);box.hidden=false;
+   if(tabs.children.length===1){show(b,x)}
+  };t.src=x[1];
+ });
+ function show(b,x){[].forEach.call(tabs.children,function(c){c.setAttribute("aria-selected",c===b)});im.src=x[1];im.alt=x[0]+" page of the gym membership app"}
  if("IntersectionObserver" in window){
   var a=l.querySelectorAll("a"),io=new IntersectionObserver(function(es){
    es.forEach(function(e){if(e.isIntersecting){a.forEach(function(x){x.classList.toggle("on",x.getAttribute("href")==="#"+e.target.id)})}})
