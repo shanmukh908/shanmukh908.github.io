@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shanmukha Vardhan Valaboju | Java Backend Developer</title>
+<meta name="description" content="Java backend developer building secure Spring Boot applications. See the live project, source code and resume.">
+<meta property="og:title" content="Shanmukha Vardhan Valaboju | Java Backend Developer">
+<meta property="og:description" content="Spring Boot, Spring Security, JPA and MySQL. Live demo and source code.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#3451e6">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%233451e6'/%3E%3Ctext x='32' y='42' font-size='28' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3ESV%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#f7f8fb;--surface:#fff;--ink:#0f172a;--muted:#5b6678;--line:#e2e6ee;--brand:#3451e6;--brand-ink:#fff;--soft:#eaeefe;--ok:#12a150;color-scheme:light}
+:root[data-theme="dark"]{--bg:#0a0f1c;--surface:#111a2e;--ink:#eaf0fb;--muted:#9ba8c0;--line:#22304d;--brand:#8aa2ff;--brand-ink:#0a0f1c;--soft:#18264a;--ok:#3ddc84;color-scheme:dark}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0a0f1c;--surface:#111a2e;--ink:#eaf0fb;--muted:#9ba8c0;--line:#22304d;--brand:#8aa2ff;--brand-ink:#0a0f1c;--soft:#18264a;--ok:#3ddc84;color-scheme:dark}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:var(--brand)}
+a:focus-visible,button:focus-visible{outline:3px solid var(--brand);outline-offset:3px}
+.c{max-width:1080px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top)}
+.bar{display:flex;align-items:center;gap:20px;height:64px}
+.logo{font-weight:800;letter-spacing:-.02em;color:var(--ink);text-decoration:none;font-size:1.05rem}
+.links{display:flex;gap:4px;margin-left:auto}
+.links a{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:8px;font-size:.93rem;font-weight:500}
+.links a:hover,.links a.on{color:var(--ink);background:var(--soft)}
+.ib{background:transparent;border:1px solid var(--line);color:var(--ink);border-radius:8px;height:38px;min-width:38px;padding:0 10px;cursor:pointer;font:inherit;font-size:.88rem}
+#menu{display:none}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;border:1px solid var(--brand);background:var(--brand);color:var(--brand-ink);text-decoration:none;font-weight:600;font-size:.95rem;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px);box-shadow:0 6px 18px color-mix(in srgb,var(--brand) 35%,transparent)}
+.btn.ghost{background:transparent;color:var(--brand)}
+.btn.sm{padding:8px 14px;font-size:.88rem}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:72px 0 56px}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:999px;padding:6px 14px;font-size:.88rem;color:var(--muted);margin-bottom:22px}
+.dot{width:9px;height:9px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px color-mix(in srgb,var(--ok) 22%,transparent)}
+h1{font-size:clamp(2.3rem,5.2vw,3.7rem);line-height:1.06;letter-spacing:-.035em;font-weight:800;margin:0 0 18px}
+.lead{font-size:1.15rem;color:var(--muted);max-width:34em;margin:0 0 28px}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.facts{display:flex;flex-wrap:wrap;gap:28px;margin-top:36px}
+.facts div{border-left:3px solid var(--brand);padding-left:12px}
+.facts b{display:block;font-size:1.35rem;line-height:1.2}
+.facts span{font-size:.85rem;color:var(--muted)}
+.win{background:var(--surface);border:1px solid var(--line);border-radius:14px;box-shadow:0 24px 60px -20px rgba(15,23,42,.35);overflow:hidden}
+.wbar{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid var(--line);background:var(--soft)}
+.wbar i{width:10px;height:10px;border-radius:50%;background:var(--line)}
+.wbar em{margin-left:10px;font-style:normal;font-size:.75rem;color:var(--muted);background:var(--surface);border-radius:6px;padding:2px 10px;flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.wb{padding:16px}
+.mini{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:12px}
+.mini div{border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.mini small{display:block;color:var(--muted);font-size:.72rem}
+.mini b{font-size:1.25rem}
+.tr{display:grid;grid-template-columns:1.4fr 1fr .8fr;gap:8px;padding:8px 4px;border-top:1px solid var(--line);font-size:.78rem;color:var(--muted)}
+.tr b{color:var(--ink);font-weight:600}
+.badge{justify-self:start;font-size:.7rem;padding:1px 8px;border-radius:999px;background:color-mix(in srgb,var(--ok) 18%,transparent);color:var(--ok);font-weight:600}
+.badge.w{background:color-mix(in srgb,#f59e0b 20%,transparent);color:#b45309}
+:root[data-theme="dark"] .badge.w{color:#fbbf24}
+.cap{font-size:.78rem;color:var(--muted);text-align:center;margin:10px 0 0}
+section{padding:64px 0;border-top:1px solid var(--line)}
+h2{font-size:clamp(1.6rem,3.4vw,2.2rem);letter-spacing:-.025em;line-height:1.15;margin:0 0 10px}
+.sub{color:var(--muted);margin:0 0 32px;max-width:40em}
+h3{margin:0 0 6px;font-size:1.08rem}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:32px}
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:22px 0}
+.g2>div{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--bg)}
+.g2 p{margin:0;color:var(--muted);font-size:.93rem}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 24px}
+.tags span{background:var(--soft);padding:4px 12px;border-radius:999px;font-size:.84rem;font-weight:500}
+.note{font-size:.85rem;color:var(--muted);margin:16px 0 0}
+.tl{position:relative;margin-left:8px;padding-left:28px;border-left:2px solid var(--line)}
+.tl>div{position:relative;margin-bottom:34px}
+.tl>div::before{content:"";position:absolute;left:-37px;top:7px;width:14px;height:14px;border-radius:50%;background:var(--brand);border:3px solid var(--bg)}
+.when{font-size:.88rem;color:var(--muted);margin:0 0 8px}
+.tl ul{margin:8px 0 0;padding-left:20px}
+.tl li{margin-bottom:6px}
+.sk{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px}
+.sk h3{font-size:.95rem;color:var(--muted);font-weight:600;margin-bottom:10px}
+.sk .tags{margin:0}
+.big{font-size:2.6rem;font-weight:800;letter-spacing:-.03em;line-height:1}
+.cta{background:var(--brand);color:var(--brand-ink);border-radius:20px;padding:48px 32px;text-align:center}
+.cta h2{margin-bottom:12px}
+.cta p{margin:0 auto 26px;max-width:34em;opacity:.9}
+.cta .btn{background:var(--brand-ink);color:var(--brand);border-color:var(--brand-ink)}
+.cta .btn.ghost{background:transparent;color:var(--brand-ink)}
+footer{padding:28px 0 40px;color:var(--muted);font-size:.86rem;text-align:center}
+@keyframes up{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+.hero>*{animation:up .7s ease both}.hero>*:nth-child(2){animation-delay:.12s}
+@media (max-width:860px){
+ .hero{grid-template-columns:1fr;gap:36px;padding-top:40px}
+ .links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;background:var(--bg);border-bottom:1px solid var(--line);padding:10px 24px 16px}
+ .links.open{display:flex}
+ #menu{display:inline-block;margin-left:auto}
+ .bar .ib#theme{margin-left:0}
+ .card{padding:22px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero>*{animation:none}.btn{transition:none}}
+</style>
+</head>
+<body>
+<header>
+ <div class="c bar">
+  <a class="logo" href="#top">Shanmukha V.</a>
+  <nav class="links" id="links" aria-label="Main">
+   <a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#practice">Problem solving</a><a href="#contact">Contact</a>
+  </nav>
+  <button class="ib" id="theme" type="button" aria-label="Switch between light and dark theme">Theme</button>
+  <a class="btn sm" href="Shanmukha_Resume.pdf" download>Resume</a>
+  <button class="ib" id="menu" type="button" aria-label="Open menu" aria-expanded="false">Menu</button>
+ </div>
+</header>
+
+<main id="top">
+<div class="c hero">
+ <div>
+  <div class="pill"><span class="dot"></span>Open to Java backend roles</div>
+  <h1>Shanmukha Vardhan Valaboju</h1>
+  <p class="lead">Java backend developer who builds secure, database-driven web applications with Spring Boot. I work in production support today and build backend projects to move into development.</p>
+  <div class="row">
+   <a class="btn" href="https://shanmukhs-gym.onrender.com">Try the live project</a>
+   <a class="btn ghost" href="https://github.com/shanmukh908">GitHub</a>
+   <a class="btn ghost" href="https://www.linkedin.com/in/shanmukha-vardhan-valaboju-82786b269">LinkedIn</a>
+  </div>
+  <div class="facts">
+   <div><b>8.02</b><span>CGPA, B.Tech CSE</span></div>
+   <div><b>317</b><span>LeetCode solved</span></div>
+   <div><b>295</b><span>GeeksforGeeks solved</span></div>
+  </div>
+ </div>
+ <div>
+  <div class="win" role="img" aria-label="Illustration of the gym app dashboard with sample data">
+   <div class="wbar"><i></i><i></i><i></i><em>shanmukhs-gym.onrender.com</em></div>
+   <div class="wb">
+    <div class="mini">
+     <div><small>Total members</small><b>128</b></div>
+     <div><small>Active members</small><b>96</b></div>
+     <div><small>Expiring in 7 days</small><b>9</b></div>
+     <div><small>Revenue this month</small><b>₹84,500</b></div>
+    </div>
+    <div class="tr"><b>Renewal calls</b><span>Plan</span><span>Ends</span></div>
+    <div class="tr"><b>Member A</b><span>Monthly</span><span class="badge w">2 days</span></div>
+    <div class="tr"><b>Member B</b><span>Quarterly</span><span class="badge w">5 days</span></div>
+    <div class="tr"><b>Member C</b><span>Yearly</span><span class="badge">Active</span></div>
+   </div>
+  </div>
+  <p class="cap">Illustration of the app with sample data</p>
+ </div>
+</div>
+
+<div class="c">
+<section id="projects">
+ <h2>Featured project</h2>
+ <p class="sub">A complete application I designed, built, secured and deployed. The code is public and the app is live.</p>
+ <article class="card">
+  <h3 style="font-size:1.4rem">Shanmukh’s Gym: Membership Management System</h3>
+  <p>A web app that a gym front desk can run: add members, sell membership plans, track renewals and see revenue on a dashboard.</p>
+  <div class="g2">
+   <div><h3>Role-based security</h3><p>Admin has full access. Staff cannot change plans or delete members. Rules are enforced on the server, not just hidden in the menu.</p></div>
+   <div><h3>Safe logins</h3><p>BCrypt-hashed passwords, CSRF protection on every form, and secrets kept out of the repository.</p></div>
+   <div><h3>Real business rules</h3><p>No overlapping memberships, the price is saved at purchase time, and status is calculated from dates. All run in transactional service methods.</p></div>
+   <div><h3>Efficient queries</h3><p>JPQL aggregates for the dashboard, a NOT EXISTS subquery for members who have not renewed, and fetch joins to avoid N+1 queries.</p></div>
+  </div>
+  <div class="tags"><span>Java</span><span>Spring Boot</span><span>Spring Security</span><span>Spring Data JPA</span><span>Hibernate</span><span>Thymeleaf</span><span>MySQL</span><span>Docker</span></div>
+  <div class="row">
+   <a class="btn" href="https://shanmukhs-gym.onrender.com">Open live demo</a>
+   <a class="btn ghost" href="https://github.com/shanmukh908/shanmukhs-gym-management">View source code</a>
+  </div>
+  <p class="note">Deployed with Docker on Render with a managed MySQL database. It runs on free hosting and sleeps when idle, so the first load can take 1 to 2 minutes. It contains sample data only.</p>
+ </article>
+ <!--
+ MORE PROJECTS: copy the <article class="card"> block above, change the text and links.
+ Add a project only when its repository is public and you can explain every part of it.
+ Remove any number you have not measured yourself.
+ -->
+</section>
+
+<section id="experience">
+ <h2>Experience</h2>
+ <p class="sub">Production support experience, with a Java internship before it.</p>
+ <div class="tl">
+  <div>
+   <h3>Programmer Analyst, Cognizant</h3>
+   <p class="when">July 2025 to present, Hyderabad</p>
+   <ul>
+    <li>Monitor production dashboards and application logs, and respond to alerts within agreed SLAs for a UK health-insurance client.</li>
+    <li>Resolve incidents and support tickets in PHP and SharePoint, following standard operating procedures.</li>
+    <li>Work with senior engineers to trace complex incidents and understand large application workflows.</li>
+   </ul>
+  </div>
+  <div>
+   <h3>Intern, Cognizant</h3>
+   <p class="when">January to April 2025</p>
+   <p style="margin:0">Java development internship, where I started working with Java backend code.</p>
+  </div>
+ </div>
+</section>
+
+<section id="skills">
+ <h2>Skills</h2>
+ <p class="sub">Tools I have used in projects or at work.</p>
+ <div class="sk">
+  <div><h3>Languages</h3><div class="tags"><span>Java</span><span>SQL</span><span>JavaScript</span><span>HTML</span><span>CSS</span></div></div>
+  <div><h3>Backend</h3><div class="tags"><span>Spring Boot</span><span>Spring MVC</span><span>Spring Data JPA</span><span>Hibernate</span><span>Spring Security</span><span>REST APIs</span></div></div>
+  <div><h3>Data</h3><div class="tags"><span>MySQL</span><span>Database design</span><span>JPQL</span></div></div>
+  <div><h3>Tools</h3><div class="tags"><span>Git</span><span>GitHub</span><span>Maven</span><span>Docker</span><span>Thymeleaf</span><span>Bootstrap</span></div></div>
+  <div><h3>Fundamentals</h3><div class="tags"><span>Data structures</span><span>Algorithms</span><span>OOP</span><span>DBMS</span><span>MVC</span></div></div>
+  <div><h3>At work</h3><div class="tags"><span>PHP</span><span>SharePoint</span><span>Production monitoring</span></div></div>
+ </div>
+</section>
+
+<section id="practice">
+ <h2>Problem solving</h2>
+ <p class="sub">Regular practice on coding platforms, plus coursework in data structures.</p>
+ <div class="g2">
+  <div><div class="big">317</div><p>problems solved on <a href="https://leetcode.com/u/shanmukhavardhan/">LeetCode</a></p></div>
+  <div><div class="big">295</div><p>problems solved on <a href="https://www.geeksforgeeks.org/profile/shanmukhavax5ad?tab=activity">GeeksforGeeks</a></p></div>
+  <div><h3>NPTEL</h3><p>Data Structures and Algorithms in Java, 92%, top 1% nationally</p></div>
+  <div><h3>Udemy</h3><p>Spring Boot 3, Spring 6 and Hibernate</p></div>
+ </div>
+</section>
+
+<section id="education">
+ <h2>Education</h2>
+ <h3>B.Tech in Computer Science and Engineering</h3>
+ <p class="when" style="margin:0;color:var(--muted)">Kakatiya Institute of Technology and Science, 2021 to 2025, CGPA 8.02 / 10</p>
+</section>
+
+<section id="contact" style="border-top:0">
+ <div class="cta">
+  <h2>Let’s talk about Java backend roles</h2>
+  <p>I am looking for a backend developer role where I can keep building and learning. Email is the quickest way to reach me.</p>
+  <div class="row" style="justify-content:center">
+   <a class="btn" href="mailto:shanmukhavardhan1122@gmail.com">Email me</a>
+   <a class="btn ghost" href="https://www.linkedin.com/in/shanmukha-vardhan-valaboju-82786b269">LinkedIn</a>
+   <a class="btn ghost" href="Shanmukha_Resume.pdf" download>Download resume</a>
+  </div>
+ </div>
+</section>
+</div>
+</main>
+<footer>Shanmukha Vardhan Valaboju</footer>
+
+<script>
+(function(){
+ var r=document.documentElement,t=document.getElementById("theme"),m=document.getElementById("menu"),l=document.getElementById("links");
+ try{var s=localStorage.getItem("theme");if(s){r.setAttribute("data-theme",s)}}catch(e){}
+ t.addEventListener("click",function(){
+  var d=r.getAttribute("data-theme")==="dark"||(!r.getAttribute("data-theme")&&matchMedia("(prefers-color-scheme: dark)").matches);
+  var n=d?"light":"dark";r.setAttribute("data-theme",n);
+  try{localStorage.setItem("theme",n)}catch(e){}
+ });
+ m.addEventListener("click",function(){var o=l.classList.toggle("open");m.setAttribute("aria-expanded",o)});
+ l.addEventListener("click",function(){l.classList.remove("open");m.setAttribute("aria-expanded","false")});
+ if("IntersectionObserver" in window){
+  var a=l.querySelectorAll("a"),io=new IntersectionObserver(function(es){
+   es.forEach(function(e){if(e.isIntersecting){a.forEach(function(x){x.classList.toggle("on",x.getAttribute("href")==="#"+e.target.id)})}})
+  },{rootMargin:"-45% 0px -50% 0px"});
+  document.querySelectorAll("section[id]").forEach(function(x){io.observe(x)});
+ }
+})();
+</script>
+</body>
+</html>
